@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Accessible to do list</title>
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <div>
+            <div class="container">
+                <h1 tabindex="-1" id="heading">To do list</h1>
+                <form action="index.html" method="post" id="to_do_form">
+                    <label for="todo" id="to_do_add_label">
+                        Add a new task to your list (required)
+                    </label>
+                    <div class="input_container">
+                        <input
+                            type="text"
+                            id="todo"
+                            class="task_input"
+                            required
+                            aria-describedby="example"
+                        />
+                        <input
+                            type="submit"
+                            value="Add"
+                            class="add_task"
+                        />
+                    </div>
+                    <p id="example" class="example">
+                        Example: Water the plants
+                    </p>
+                </form>
+                <ul id="list" class="list">
+                </ul>
+                <p
+                    role="status"
+                    aria-live="polite"
+                    id="sc_feedback"
+                    class="sc_feedback"
+                >
+                </p>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
